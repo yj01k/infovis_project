@@ -1,31 +1,138 @@
 ﻿id,package,date,severity,cvss_score,patched_versions,keywords,type,url,description
+RUSTSEC-2019-0022,portaudio-rs,2019-09-14,critical,9.8,> 0.3.1,code-execution,Vulnerability,https://github.com/mvdnes/portaudio-rs/issues/20,Stream callback function is not unwind safe
+RUSTSEC-2020-0060,futures-task,2020-09-04,high,7.8,>=0.3.6,code-execution,Vulnerability,https://github.com/rust-lang/futures-rs/pull/2206,futures_task::waker may cause a use-after-free if used on a type that isn't 'static
+RUSTSEC-2020-0159,chrono,2020-11-10,none,,>=0.4.20,code-execution,Vulnerability,https://github.com/chronotope/chrono/issues/499,Potential segfault in?localtime_r?invocations
+RUSTSEC-2021-0077,better-macro,2021-07-22,none,,,code-execution,Vulnerability,https://github.com/raycar5/better-macro/blob/24ff1702397b9c19bbfa4c660e2316cd77d3b900/src/lib.rs#L36-L38,better-macro has deliberate RCE to prove a point
+RUSTSEC-2021-0106,bat,2021-07-15,high,7.8,>=0.18.2,code-execution,Vulnerability,https://nvd.nist.gov/vuln/detail/CVE-2021-36753,Uncontrolled Search Path Element in sharkdp/bat
+RUSTSEC-2022-0017,array-macro,2022-04-27,none,,>= 2.1.2,code-execution,info,https://gitlab.com/KonradBorowski/array-macro/-/issues/5,array! macro is unsound when its length is impure constant
+RUSTSEC-2024-0349,gix-worktree,2024-05-22,high,8.8,>= 0.34.0,code-execution,Vulnerability,https://github.com/Byron/gitoxide/security/advisories/GHSA-7w47-3wg8-547c,Traversal outside working tree enables arbitrary code execution
+RUSTSEC-2024-0433,age,2024-12-18,none,,>=0.11.1,code-execution,Vulnerability,https://github.com/str4d/rage/security/advisories/GHSA-4fg7-vxc8-qx5w,"Malicious plugin names, recipients, or identities can cause arbitrary binary execution"
+RUSTSEC-2019-0012,smallvec,2019-10-01,critical,9.8,>=0.6.10,code-execution,Vulnerability,https://github.com/servo/rust-smallvec/issues/149 ,Memory corruption in SmallVec::grow()
+RUSTSEC-2020-0071,time,2020-11-18,medium,6.2,>=0.2.23,code-execution,Vulnerability,https://github.com/time-rs/time/issues/293,Potential segfault in the time crate
+RUSTSEC-2021-0067,cranelift-codegen,2021-03-21,high,8.8,>=0.73.1,code-execution,Vulnerability,https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-hpqh-2wqx-7qp5,Memory access due to code generation flaw in Cranelift module
+RUSTSEC-2021-0071,grep-cli,2021-06-12,critical,9.8,>=0.1.6,code-execution,Vulnerability,https://github.com/BurntSushi/ripgrep/issues/177,grep-cli may run arbitrary executables on Windows
+RUSTSEC-2025-0016,pared,2024-03-13,none,,>=0.4.0,code-execution,Vulnerability,https://github.com/radekvit/pared/issues/2,Use after free in Parc and Prc due to missing lifetime constraints
+RUSTSEC-2024-0432,rage,2024-12-18,none,,>=0.11.1,code-execution,Vulnerability,https://github.com/str4d/rage/security/advisories/GHSA-4fg7-vxc8-qx5w,"Malicious plugin names, recipients, or identities can cause arbitrary binary execution"
+RUSTSEC-2024-0348,gix-index ,2024-03-22,high,8.8,>=0.33.0,code-execution,Vulnerability,https://github.com/Byron/gitoxide/security/advisories/GHSA-7w47-3wg8-547c,Traversal outside working tree enables arbitrary code execution
+RUSTSEC-2022-0064,openssl-src ,2022-11-01,none,,>=300.0.11,code-execution,Vulnerability,https://www.openssl.org/news/secadv/20221101.txt ,X.509 Email Address 4-byte Buffer Overflow
+RUSTSEC-2019-0019,blake2,2019-08-25,critical,9.8,>= 0.8.1,crypto-failure,Vulnerability,https://github.com/RustCrypto/MACs/issues/19,HMAC-BLAKE2 algorithms compute incorrect results
+RUSTSEC-2019-0029,chacha20,2019-10-22,high,7.5,>= 0.2.3,crypto-failure,Vulnerability,https://github.com/RustCrypto/stream-ciphers/pull/64,ChaCha20 counter overflow can expose repetitions in the keystream
+RUSTSEC-2021-0075,ark-r1cs-std,2021-07-08,none,,>=0.3.1,crypto-failure,Vulnerability,https://github.com/arkworks-rs/r1cs-std/pull/70,Flaw in FieldVar::mul_by_inverse allows unsound R1CS constraint systems
+RUSTSEC-2022-0089,aliyun-oss-client,2022-11-19,medium,5.6,>= 0.8.1,crypto-failure,Vulnerability,https://github.com/advisories/GHSA-3w3h-7xgx-grwc,aliyun-oss-client secret exposure
+RUSTSEC-2023-0027,async-nats,2023-03-24,none,,>= 0.29.0,crypto-failure,Vulnerability,https://github.com/nats-io/nats.rs/commit/817a7b942c462fa9d9938dcb62124173634132fb#diff-767d442397fcaaf2f83e8f924d4a70317a2ce4703a49964d6007707949cfa5f5L303-R304,TLS certificate common name validation bypass
+RUSTSEC-2023-0068,cocoon,2023-10-15,medium,4.5,>=0.4.0,crypto-failure,Vulnerability,https://github.com/fadeevab/cocoon/issues/22,"Sequential calls of encryption API (encrypt,?wrap, and?dump) result in nonce reuse"
+RUSTSEC-2023-0079,pqc_kyber,2023-12-01,high,7.4,,crypto-failure,Vulnerability,https://github.com/Argyle-Software/kyber/issues/108,KyberSlash: division timings depending on secrets
+RUSTSEC-2024-0343,nano-id,2024-06-03,critical,9.4,>=0.4.0,crypto-failure,Vulnerability,,Reduced entropy due to inadequate character set usage
+RUSTSEC-2024-0392,cggmp21-keygen,2024-07-18,none,,>= 0.3.0,crypto-failure,Vulnerability,https://github.com/dfns/cggmp21/pull/103,Ambiguous challenge derivation
+RUSTSEC-2024-0393,cggmp21,2024-07-18,none,,>= 0.4.0,crypto-failure,Vulnerability,https://github.com/dfns/cggmp21/pull/103,Ambiguous challenge derivation
+RUSTSEC-2024-0434,matrix-sdk-crypto,2024-01-07,none,,>= 0.8.0,crypto-failure,info,https://github.com/matrix-org/matrix-rust-sdk/security/advisories/GHSA-r5vf-wf4h-82gg,Missing facility to signal rotation of a verified cryptographic identity
+RUSTSEC-2025-0021,gix-features,2024-04-03,medium,6.8,>=0.41.0,crypto-failure,Vulnerability,https://nvd.nist.gov/vuln/detail/CVE-2025-31130,SHA-1 collision attacks are not detected
+RUSTSEC-2025-0006,hickory-proto,2025-02-07,none,,>=0.25.0,crypto-failure,Vulnerability,https://github.com/hickory-dns/hickory-dns/security/advisories/GHSA-37wc-h8xc-5hc4 ,Hickory DNS failure to verify self-signed RRSIG for DNSKEYs
+RUSTSEC-2020-0160,shamir,2020-01-21,none,,>=2.0.0,crypto-failure,Vulnerability,https://github.com/Nebulosus/shamir/issues/3,Threshold value is ignored (all shares are n=3)
+RUSTSEC-2020-0156,libsecp256k1-rs ,2020-01-22,medium,5.9,>=0.3.1,crypto-failure,Vulnerability,https://nvd.nist.gov/vuln/detail/CVE-2019-20399,Observable Discrepancy in libsecp256k1-rs
+RUSTSEC-2019-0007,asn1_der,2019-06-13,high,7.5,>= 0.6.2,denial-of-service,Vulnerability,https://github.com/KizzyCode/asn1_der/issues/1,Processing of maliciously crafted length fields causes memory allocation SIGABRTs
+RUSTSEC-2020-0075,branca,2020-11-29,medium,5.5,>=0.10.0,denial-of-service,Vulnerability,https://github.com/return/branca/issues/24,Unexpected panic when decoding tokens
+RUSTSEC-2022-0037,async-graphql,2022-07-21,high,7.5,>= 4.0.6,denial-of-service,Vulnerability,https://github.com/async-graphql/async-graphql/commit/521769b80039fc8043d1c9883e3d6e5b57359072,Denial of service on deeply nested fragment requests
+RUSTSEC-2022-0055,axum-core,2022-08-31,none,,">= 0.2.8, < 0.3.0-rc.1, >= 0.3.0-rc.2",denial-of-service,Vulnerability,https://github.com/tokio-rs/axum/pull/1346,No default limit put on request bodies
+RUSTSEC-2022-0090,libsqlite3-sys,2022-08-03,high,7.5,>= 0.25.1,denial-of-service,Vulnerability,https://nvd.nist.gov/vuln/detail/CVE-2022-35737,libsqlite3-sys?via C SQLite CVE-2022-35737
+RUSTSEC-2023-0004,bzip2,2023-01-09,none,,>= 0.4.4,denial-of-service,Vulnerability,https://github.com/alexcrichton/bzip2-rs/pull/86,bzip2 Denial of Service (DoS)
+RUSTSEC-2023-0039,buffered-reader,2023-05-16,none,,">= 1.0.2, < 1.1.0, >= 1.1.5, < 1.2.0, >= 1.2.0",denial-of-service,Vulnerability,https://lists.sequoia-pgp.org/hyperkitty/list/announce@lists.sequoia-pgp.org/thread/SN2E3QRT4DMQ5JNEK6VIN6DJ5SH766DI/,Out-of-bounds array access leads to panic
+RUSTSEC-2023-0062,bcder,2023-09-13,high,7.5,>= 0.7.3,denial-of-service,Vulnerability,https://nlnetlabs.nl/downloads/bcder/CVE-2023-39914.txt,BER/CER/DER decoder panics on invalid input
+RUSTSEC-2023-0073,candid,2023-12-08,high,7.5,>=0.9.10,denial-of-service,Vulnerability,https://github.com/dfinity/candid/pull/478,Infinite decoding loop through specially crafted payload
+RUSTSEC-2023-0083,blurhash,2023-09-19,high,8.6,>=0.2.0,denial-of-service,Vulnerability,https://github.com/whisperfish/blurhash-rs/security/advisories/GHSA-cxvp-82cq-57h2,blurhash: panic on parsing crafted blurhash inputs
+RUSTSEC-2024-0373,quinn-proto,2024-09-02,high,7.5,>= 0.11.7,denial-of-service,Vulnerability,https://github.com/quinn-rs/quinn,Endpoint::retry()?calls can lead to panicking
+RUSTSEC-2021-0105,git-delta ,2021-09-09,high,7.8,>=0.8.3,file-disclosure,Vulnerability,https://nvd.nist.gov/vuln/detail/CVE-2021-36376 ,Relative Path Traversal in git-delta
+RUSTSEC-2023-0069,sudo-rs,2023-11-01,low,3.1,>=0.2.1,file-disclosure,Vulnerability,https://github.com/advisories/GHSA-2r3c-m6v7-9354,sudo-rs: Path Traversal vulnerability
+RUSTSEC-2020-0069,lettre,2020-11-11,medium,5.3,>=0.10.0-alpah.4,file-disclosure,Vulnerability,https://github.com/lettre/lettre/pull/508/commits/bbe7cc5381c5380b54fb8bbb4f77a3725917ff0b,Argument injection in sendmail transport
+RUSTSEC-2021-0104,pleaser ,2021-03-27,low,3.3,>=0.4,file-disclosure,Vulnerability,https://nvd.nist.gov/vuln/detail/CVE-2021-31153,File exposure in pleaser
+RUSTSEC-2024-0006,shlex,2024-01-21,none,,>=1.3.0,file-disclosure,Vulnerability,https://github.com/comex/rust-shlex/security/advisories/GHSA-r7qv-8r2h-pg27,Multiple issues involving quote API
+RUSTSEC-2023-0023,openssl,2023-03-24,none,,>=0.10.48,file-disclosure,Vulnerability,https://github.com/sfackler/rust-openssl/pull/1854 ,openssl SubjectAlternativeName and ExtendedKeyUsage::other allow arbitrary file read
+RUSTSEC-2022-0082,warp,2022-01-14,none,,>=0.3.3,file-disclosure,Vulnerability,https://github.com/seanmonstar/warp/issues/937 ,Improper validation of Windows paths could lead to directory traversal attack
+RUSTSEC-2022-0069,hyper-staticfile,2022-11-30,none,,>=0.10.0-alpah.2,file-disclosure,Vulnerability,https://github.com/stephank/hyper-staticfile/issues/35 ,Improper validation of Windows paths could lead to directory traversal attack
+RUSTSEC-2020-0008,hyper,2020-03-19,critical,9.8,>=0.12.34,format-injection,Vulnerability,https://github.com/hyperium/hyper/issues/1925 ,Flaw in hyper allows request smuggling by sending a body in GET requests
+RUSTSEC-2021-0020,hyper,2021-02-05,high,8.1,>=0.14.3,format-injection,Vulnerability,https://github.com/hyperium/hyper/security/advisories/GHSA-6hfq-h8hq-87mf,
+RUSTSEC-2021-0074,ammonia,2021-07-08,none,,">= 3.1.0, >= 2.1.3, < 3.0.0",format-injection,Vulnerability,https://github.com/rust-ammonia/ammonia/pull/142,Incorrect handling of embedded SVG and MathML leads to mutation XSS
+RUSTSEC-2022-0003,ammonia,2022-01-19,none,,>=3.1.3,format-injection,Vulnerability,https://github.com/rust-ammonia/ammonia/pull/147,Space bug in clean_text
+RUSTSEC-2024-0365,diesel ,2024-08-23,none,,>=2.2.3,format-injection,Vulnerability,https://github.com/diesel-rs/diesel/pull/4170,Binary Protocol Misinterpretation caused by Truncating or Overflowing Casts
+RUSTSEC-2024-0363,sqlx,2024-08-15,none,,>=0.8.1,format-injection,Vulnerability,https://github.com/launchbadge/sqlx/issues/3440,Binary Protocol Misinterpretation caused by Truncating or Overflowing Casts
+RUSTSEC-2021-0026,comrak,2021-02-21,medium,6.1,>=0.9.1,format-injection,Vulnerability,https://github.com/kivikakk/comrak/releases/tag/0.9.1,XSS in comrak
+RUSTSEC-2021-0069,lettre,2021-03-22,none,,,format-injection,Vulnerability,https://github.com/lettre/lettre/pull/627/commits/93458d01fed0ec81c0e7b4e98e6f35961356fae2,SMTP command injection in body
 RUSTSEC-2017-0004,base64,2017-05-03,critical,9.8,>= 0.5.2,memory-corruption,Vulnerability,https://github.com/alicemaz/rust-base64/commit/24ead980daf11ba563e4fb2516187a56a71ad319,Integer overflow leads to heap-based buffer overflow in encode_config_buf
 RUSTSEC-2018-0011,arrayfire,2018-12-18,critical,9.8,>=3.6.0,memory-corruption,Vulnerability,https://github.com/arrayfire/arrayfire-rust/pull/177,Enum repr causing potential memory corruption
 RUSTSEC-2018-0019,actix-web,2018-06-08,none,,>= 0.7.15,memory-corruption,Vulnerability,https://github.com/actix/actix-web/issues/289,Multiple memory safety issues
 RUSTSEC-2019-0001,ammonia,2019-04-27,high,7.5,>=2.1.0,memory-corruption,Vulnerability,https://github.com/rust-ammonia/ammonia/blob/master/CHANGELOG.md#210,Uncontrolled recursion leads to abort in HTML serialization
-RUSTSEC-2019-0007,asn1_der,2019-06-13,high,7.5,>= 0.6.2,denial-of-service,Vulnerability,https://github.com/KizzyCode/asn1_der/issues/1,Processing of maliciously crafted length fields causes memory allocation SIGABRTs
 RUSTSEC-2019-0016,chttp,2019-09-01,critical,9.8,>= 0.1.3,memory-corruption,Vulnerability,https://github.com/sagebind/isahc/issues/2,Use-after-free in buffer conversion implementation
-RUSTSEC-2019-0019,blake2,2019-08-25,critical,9.8,>= 0.8.1,crypto-failure,Vulnerability,https://github.com/RustCrypto/MACs/issues/19,HMAC-BLAKE2 algorithms compute incorrect results
-RUSTSEC-2019-0022,portaudio-rs,2019-09-14,critical,9.8,> 0.3.1,code-execution,Vulnerability,https://github.com/mvdnes/portaudio-rs/issues/20,Stream callback function is not unwind safe
-RUSTSEC-2019-0029,chacha20,2019-10-22,high,7.5,>= 0.2.3,crypto-failure,Vulnerability,https://github.com/RustCrypto/stream-ciphers/pull/64,ChaCha20 counter overflow can expose repetitions in the keystream
 RUSTSEC-2020-0005,cbox,2020-03-19,critical,9.8,,memory-corruption,Vulnerability,https://github.com/TomBebbington/cbox-rs/issues/2,CBox API allows to de-reference raw pointers without?unsafe?code
-RUSTSEC-2020-0006,bumpalo,2020-03-24,high,7.5,>= 3.2.1,memory-exposure,Vulnerability,https://github.com/fitzgen/bumpalo/issues/69,Flaw in realloc allows reading unknown memory
 RUSTSEC-2020-0007,bitvec,2020-03-27,critical,9.8,>=0.17.4,memory-corruption,Vulnerability,https://github.com/myrrlyn/bitvec/issues/55,use-after or double free of allocated memory
-RUSTSEC-2020-0008,hyper,2020-03-19,critical,9.8,>=0.12.34,format-injection,Vulnerability,https://github.com/hyperium/hyper/issues/1925 ,Flaw in hyper allows request smuggling by sending a body in GET requests
 RUSTSEC-2020-0032,alpm-rs,2020-08-20,critical,9.8,,memory-corruption,Vulnerability,https://github.com/pigeonhands/rust-arch/issues/2,StrcCtx deallocates a memory region that it doesn't own
-RUSTSEC-2020-0034,arr,2020-08-25,none,,,thread-safety,Vulnerability,https://github.com/sjep/array/issues/1,"Multiple security issues including data race, buffer overflow, and uninitialized memory drop"
-RUSTSEC-2020-0044,atom,2020-09-21,medium,4.7,>= 0.3.6,thread-safety,Vulnerability,https://github.com/slide-rs/atom/issues/13,Unsafe Send implementation in Atom allows data races
 RUSTSEC-2020-0045,actix-utils,2020-01-08,critical,9.1,>= 2.0.0,memory-corruption,info,https://github.com/actix/actix-net/issues/160,bespoke Cell implementation allows obtaining several mutable references to the same data
 RUSTSEC-2020-0046,actix-service,2020-01-08,medium,5.5,>= 1.0.6,memory-corruption,info,https://github.com/actix/actix-net/pull/158,bespoke Cell implementation allows obtaining several mutable references to the same data
 RUSTSEC-2020-0047,array-queue,2020-09-26,medium,5.5,,memory-corruption,Vulnerability,https://github.com/raviqqe/array-queue/issues/2,array_queue pop_back() may cause a use-after-free
 RUSTSEC-2020-0048,actix-http,2020-01-24,high,7.5,>= 2.0.0-alpha.1,memory-corruption,Vulnerability,https://github.com/actix/actix-web/issues/1321,Potential request smuggling capabilities due to lack of input validation
 RUSTSEC-2020-0049,actix-codec,2020-01-30,critical,9.8,>= 0.3.0-beta.1,memory-corruption,Vulnerability,https://github.com/actix/actix-net/issues/91,Use-after-free in Framed due to lack of pinning
-RUSTSEC-2020-0060,futures-task,2020-09-04,high,7.8,>=0.3.6,code-execution,Vulnerability,https://github.com/rust-lang/futures-rs/pull/2206,futures_task::waker may cause a use-after-free if used on a type that isn't 'static
-RUSTSEC-2020-0075,branca,2020-11-29,medium,5.5,>=0.10.0,denial-of-service,Vulnerability,https://github.com/return/branca/issues/24,Unexpected panic when decoding tokens
 RUSTSEC-2020-0091,arc-swap,2020-12-10,high,7.5,>=1.1.0,memory-corruption,Vulnerability,https://github.com/vorner/arc-swap/issues/45,Dangling reference in access::Map with Constant
-RUSTSEC-2020-0099,aovec,2020-12-10,high,7,,thread-safety,Vulnerability,,Aovec lacks bound on its Send and Sync traits allowing data races
 RUSTSEC-2020-0103,autorand,2020-12-31,high,7.8,>= 0.2.3,memory-corruption,Vulnerability,https://github.com/mersinvald/autorand-rs/issues/5,impl Random on arrays can lead to dropping uninitialized memory
 RUSTSEC-2020-0105,abi_stable,2020-12-21,high,7.5,>= 0.9.1,memory-corruption,Vulnerability,https://github.com/rodrimati1992/abi_stable_crates/issues/44,Update unsound DrainFilter and RString::retain
+RUSTSEC-2020-0132,array-tools,2020-12-31,critical,9.8,>= 0.3.2,memory-corruption,Vulnerability,https://github.com/L117/array-tools/issues/2,FixedCapacityDequeLike::clone() can cause dropping uninitialized memory
+RUSTSEC-2020-0148,cgc,2020-12-10,medium,5.9,,memory-corruption,Vulnerability,https://github.com/playXE/cgc/issues/5,Multiple soundness issues in?Ptr
+RUSTSEC-2020-0161,array-macro,2020-05-07,none,,>= 1.0.5,memory-corruption,info,https://gitlab.com/KonradBorowski/array-macro/-/commit/01940637dd8f3bfeeee3faf9639fa9ae52f19f4d,array! macro is unsound in presence of traits that implement methods it calls internally
+RUSTSEC-2020-0164,cell-project,2020-08-27,none,,>=0.1.4,memory-corruption,info,https://github.com/RustyYato/cell-project/issues/3,cell-project?used incorrect variance when projecting through?&Cell<T>
+RUSTSEC-2021-0006,cache,2021-01-01,high,7.5,,memory-corruption,Vulnerability,https://github.com/krl/cache/issues/2,Exposes internally used raw pointer
+RUSTSEC-2021-0009,basic_dsp_matrix,2021-01-10,high,7.5,>= 0.9.2,memory-corruption,Vulnerability,https://github.com/liebharc/basic_dsp/issues/47,"panic safety issue in impl TransformContent<S, D> for [S; (2|3|4)]"
+RUSTSEC-2021-0015,calamine,2021-01-06,critical,9.8,>= 0.17.0,memory-corruption,Vulnerability,https://github.com/tafia/calamine/issues/199,Sectors::get accesses unclaimed/uninitialized memory
+RUSTSEC-2021-0027,bam,2021-01-07,critical,9.8,>=0.1.3,memory-corruption,Vulnerability,https://gitlab.com/tprodanov/bam/-/issues/4,Loading a bgzip block can write out of bounds if size overflows.
+RUSTSEC-2021-0032,byte_struct,2021-03-01,critical,9.8,>= 0.6.1,memory-corruption,Vulnerability,https://github.com/wwylele/byte-struct-rs/issues/1,Deserializing an array can drop uninitialized memory on panic
+RUSTSEC-2021-0040,arenavec,2021-01-12,high,7.5,,memory-corruption,Vulnerability,https://github.com/ibabushkin/arenavec/issues/1,panic safety: double drop or uninitialized drop of T upon panic
+RUSTSEC-2021-0045,adtensor,2021-01-11,critical,9.8,,memory-corruption,Vulnerability,https://github.com/charles-r-earp/adtensor/issues/4,FromIterator implementation for Vector/Matrix can drop uninitialized memory
+RUSTSEC-2021-0053,algorithmica,2021-03-07,none,,,memory-corruption,Vulnerability,https://github.com/AbrarNitk/algorithmica/issues/1,merge_sort::merge()' crashes with double-free for T: Drop
+RUSTSEC-2021-0131,brotli-sys,2021-12-20,none,,,memory-corruption,Vulnerability,https://github.com/bitemyapp/brotli2-rs/issues/45,Integer overflow in the bundled Brotli C library
+RUSTSEC-2022-0012,arrow2,2022-03-04,none,,">= 0.7.1, < 0.8, >= 0.8.2, < 0.9, >= 0.9.2, < 0.10, >= 0.10.0",memory-corruption,Vulnerability,https://github.com/jorgecarleitao/arrow2/issues/880,Arrow2 allows double free in safe code
+RUSTSEC-2023-0015,ascii,2023-02-25,none,,>= 0.9.3,memory-corruption,info,https://github.com/tomprogrammer/rust-ascii/issues/64,Ascii allows out-of-bounds array indexing in safe code
+RUSTSEC-2023-0033,borsh,2023-04-12,none,,>=0.10.4,memory-corruption,info,https://github.com/near/borsh-rs/issues/19,Parsing borsh messages with ZST which are not-copy/clone is unsound
+RUSTSEC-2024-0017,cassandra-cpp,2024-02-28,none,,>= 3.0.0,memory-corruption,info,https://github.com/Metaswitch/cassandra-rs/security/advisories/GHSA-x9xc-63hg-vcfq,Non-idiomatic use of iterators leads to use after free
+RUSTSEC-2024-0362,alloy-json-abi,2024-07-30,none,,>= 0.7.7,memory-corruption,Vulnerability,https://github.com/alloy-rs/core/issues/702,Stack overflow when parsing specially crafted JSON ABI strings
+RUSTSEC-2025-0019,array-init-cursor,2025-03-27,none,,>= 0.2.1,memory-corruption,info,https://github.com/planus-org/planus/issues/293,array-init-cursor in version 0.2.0 and below is unsound when used with types that implement Drop
+RUSTSEC-2025-0035,macroquad,2025-04-23,none,,,memory-corruption,Vulnerability,https://github.com/not-fl3/macroquad/issues/333,Multiple soundness issues in macroquad
+RUSTSEC-2025-0033,scanner,2025-03-27,none,,,memory-corruption,Vulnerability,https://github.com/pombredanne/scanner-rs/pull/1,Public API without sufficient bounds checking
+RUSTSEC-2025-0032,redox_uefi_std ,2025-03-27,none,,>=0.1.14,memory-corruption,Vulnerability,https://gitlab.redox-os.org/redox-os/uefi/-/commit/b711d47e815665b0ec8949e39292ad8e3fdd0756,Safe API can cause heap-buffer-overflow
+RUSTSEC-2025-0029,totally-safe,2025-02-10,none,,,memory-corruption,Vulnerability,https://github.com/viktorlott/totally-safe,totally-safe introduces memory vulnerabilities in safe Rust
+RUSTSEC-2024-0377,dbn,2024-10-07,none,,>0.22.0,memory-corruption,Vulnerability,https://github.com/databento/dbn/issues/67 ,Heap Buffer overflow using c_chars_to_str function
+RUSTSEC-2024-0002,vmm-sys-util,2024-01-02,medium,5.7,>=0.12.0,memory-corruption,Vulnerability,https://github.com/advisories/GHSA-875g-mfp6-g7f9 ,serde deserialization for FamStructWrapper lacks bound checks that could potentially lead to out-of-bounds memory access
+RUSTSEC-2020-0006,bumpalo,2020-03-24,high,7.5,>= 3.2.1,memory-exposure,Vulnerability,https://github.com/fitzgen/bumpalo/issues/69,Flaw in realloc allows reading unknown memory
+RUSTSEC-2020-0153,bite,2020-12-31,none,,,memory-exposure,info,https://github.com/hinaria/bite/issues/1,ead on uninitialized buffer may cause UB (bite::read::BiteReadExpandedExt::read_framed_max)
+RUSTSEC-2020-0154,buffoon,2020-12-31,none,,,memory-exposure,info,https://github.com/carllerche/buffoon/issues/2,InputStream::read_exact : Read on uninitialized buffer causes UB
+RUSTSEC-2020-0155,acc_reader,2020-12-27,none,,,memory-exposure,info,https://github.com/netvl/acc_reader/issues/1,Read?on uninitialized buffer in?fill_buf()?and?read_up_to()
+RUSTSEC-2021-0008,bra,2021-01-02,critical,9.1,>= 0.1.1,memory-exposure,Vulnerability,https://github.com/Enet4/bra-rs/issues/1,reading on uninitialized buffer can cause UB (impl<R> BufRead for GreedyAccessReader<R>)
+RUSTSEC-2021-0012,cdr,2021-01-02,critical,9.8,>= 0.2.4,memory-exposure,Vulnerability,https://github.com/hrektts/cdr-rs/issues/10,Reading uninitialized memory can cause UB (Deserializer::read_vec)
+RUSTSEC-2021-0084,bronzedb-protocol,2021-01-03,none,,,memory-exposure,info,https://github.com/Hexilee/BronzeDB/issues/1,Read?on uninitialized buffer can cause UB (impl of?ReadKVExt)
+RUSTSEC-2021-0085,binjs_io,2021-01-03,none,,,memory-exposure,info,https://github.com/binast/binjs-ref/issues/460,Read' on uninitialized memory may cause UB
+RUSTSEC-2021-0090,ash,2021-01-07,none,,>= 0.33.1,memory-exposure,info,https://github.com/MaikKlein/ash/issues/354,Reading on uninitialized memory may cause UB ( util::read_spv() )
+RUSTSEC-2021-0116,arrow,2021-09-14,none,,>= 6.4.0,memory-exposure,Vulnerability,https://github.com/apache/arrow-rs/issues/775,BinaryArray does not perform bound checks on reading values and offsets
+RUSTSEC-2021-0117,arrow,2021-09-14,none,,>= 6.4.0,memory-exposure,Vulnerability,https://github.com/apache/arrow-rs/issues/772?,DecimalArray does not perform bound checks on accessing values and offsets
+RUSTSEC-2021-0118,arrow,2021-09-14,none,,>= 6.4.0,memory-exposure,Vulnerability,https://github.com/apache/arrow-rs/issues/774,FixedSizeBinaryArray does not perform bound checks on accessing values and offsets
+RUSTSEC-2022-0068,capnp,2022-11-30,none,,">= 0.15.2, ^0.14.11, ^0.13.7",memory-exposure,Vulnerability,https://github.com/capnproto/capnproto/tree/master/security-advisories/2022-11-30-0-pointer-list-bounds.md,out-of-bounds read possible when setting list-of-pointers
+RUSTSEC-2022-0078,bumpalo,2022-01-14,none,,>=3.11.1,memory-exposure,info,https://github.com/fitzgen/bumpalo/blob/main/CHANGELOG.md#3111,Use-after-free due to a lifetime error in Vec::into_iter()
+RUSTSEC-2021-0112,tectonic_xdv,2021-02-17,none,,>=0.1.12,memory-exposure,Vulnerability,https://github.com/tectonic-typesetting/tectonic/issues/752,Read on uninitialized buffer may cause UB ('tectonic_xdv' crate)
+RUSTSEC-2025-0038,arrow2,2025-04-24,none,,,memory-exposure,Vulnerability,,Out of bounds access in public safe API
+RUSTSEC-2025-0020,pyo3,2025-04-01,none,,>=0.24.1,memory-exposure,Vulnerability,https://github.com/PyO3/pyo3/issues/5005,Risk of buffer overflow in PyString::from_object
+RUSTSEC-2025-0018,xmas-elf,2024-03-26,none,,>=0.10,memory-exposure,Vulnerability,https://github.com/nrc/xmas-elf/issues/86 ,Potential out-of-bounds read with a malformed ELF file and the HashTable API.
+RUSTSEC-2025-0004,openssl,2025-02-02,none,,>=0.10.70,memory-exposure,Vulnerability,https://github.com/sfackler/rust-openssl/pull/2360 ,ssl::select_next_proto use after free
+RUSTSEC-2024-0400,ruzstd,2024-11-28,none,,>=0.7.3,memory-exposure,Vulnerability,https://github.com/KillingSpark/zstd-rs/issues/75 ,ruzstd uninit and out-of-bounds memory reads
+RUSTSEC-2024-0354,vodozemac,2024-07-17,none,,>=0.7.0,memory-exposure,Vulnerability,https://github.com/matrix-org/vodozemac/security/advisories/GHSA-j8cm-g7r6-hfpq,Usage of non-constant time base64 decoder could lead to leakage of secret key material
+RUSTSEC-2024-0007,rust-i18n-support ,2024-01-19,none,,>=3.0.1,memory-exposure,Vulnerability,https://github.com/longbridgeapp/rust-i18n/issues/71 ,Use-after-free when setting the locale
+RUSTSEC-2023-0056,vm-memory,2023-09-01,low,2.5,>=0.12.2,memory-exposure,Vulnerability,https://github.com/rust-vmm/vm-memory/issues/250,"Default functions in VolatileMemory trait lack bounds checks, potentially leading to out-of-bounds memory accesses"
+RUSTSEC-2023-0030,versionize,2023-03-24,medium,5.7,>=0.1.10,memory-exposure,Vulnerability,https://github.com/firecracker-microvm/versionize/pull/53,"Versionize::deserialize implementation for FamStructWrapper<T> is lacking bound checks, potentially leading to out of bounds memory accesses"
+RUSTSEC-2021-0007,av-data,2021-01-07,high,7.5,>= 0.3.0,privilege-escalation,Vulnerability,https://github.com/rust-av/rust-av/issues/136,Frame::copy_from_raw_parts can lead to segfault without unsafe
+RUSTSEC-2022-0091,tauri,2022-09-19,low,2.3,>=1.1.2,privilege-escalation,Vulnerability,https://github.com/tauri-apps/tauri/issues/5234 ,tauri filesystem scope partial bypass
+RUSTSEC-2023-0066,pleaser ,2023-10-03,medium,4.6,,privilege-escalation,Vulnerability,https://gitlab.com/edneville/please/-/issues/13,Vulnerable to privilege escalation using ioctls TIOCSTI and TIOCLINUX
+RUSTSEC-2024-0371,gix-path,2024-09-06,medium,6,0.10.11,privilege-escalation,Vulnerability,https://github.com/Byron/gitoxide/security/advisories/GHSA-m8rp-vv92-46c7,gix-path improperly resolves configuration path reported by Git
+RUSTSEC-2021-0102,pleaser ,2021-03-27,high,7.8,>=0.4,privilege-escalation,Vulnerability,https://nvd.nist.gov/vuln/detail/CVE-2021-31154 ,Permissions bypass in pleaser
+RUSTSEC-2022-0088,tauri,2022-08-07,medium,5.8,>=1.0.5,privilege-escalation,Vulnerability,https://github.com/tauri-apps/tauri/issues/4882,tauri's readDir endpoint allows possible enumeration outside of filesystem scope
+RUSTSEC-2024-0355,gix-path,2024-07-18,medium,6.8,>=0.10.9,privilege-escalation,Vulnerability,https://github.com/advisories/GHSA-mgvv-9p9g-3jv4 ,gix-path can use a fake program files location
+RUSTSEC-2024-0421,idna,2024-09-09,none,,>=1.0.0,privilege-escalation,Vulnerability,https://bugzilla.mozilla.org/show_bug.cgi?id=1887898 ,idna accepts Punycode labels that do not produce any non-ASCII when decoded
+RUSTSEC-2020-0034,arr,2020-08-25,none,,,thread-safety,Vulnerability,https://github.com/sjep/array/issues/1,"Multiple security issues including data race, buffer overflow, and uninitialized memory drop"
+RUSTSEC-2020-0044,atom,2020-09-21,medium,4.7,>= 0.3.6,thread-safety,Vulnerability,https://github.com/slide-rs/atom/issues/13,Unsafe Send implementation in Atom allows data races
+RUSTSEC-2020-0099,aovec,2020-12-10,high,7,,thread-safety,Vulnerability,,Aovec lacks bound on its Send and Sync traits allowing data races
 RUSTSEC-2020-0112,buttplug,2020-12-18,medium,5.9,>= 1.0.4,thread-safety,Vulnerability,https://github.com/buttplugio/buttplug-rs/issues/225,ButtplugFutureStateShared allows data race to (!Send|!Sync) objects
 RUSTSEC-2020-0113,atomic-option,2020-10-31,medium,5.9,,thread-safety,Vulnerability,https://github.com/reem/rust-atomic-option/issues/4,AtomicOption should have Send + Sync bound on its type argument.
 RUSTSEC-2020-0121,abox,2020-11-10,high,8.1,>= 0.4.1,thread-safety,Vulnerability,https://github.com/SonicFrog/abox/issues/1,AtomicBox?implements Send/Sync for any?T: Sized
@@ -33,69 +140,13 @@ RUSTSEC-2020-0122,beef,2020-10-28,high,8.1,>= 0.5.0,thread-safety,Vulnerability,
 RUSTSEC-2020-0124,async-coap,2020-12-08,high,8.1,,thread-safety,Vulnerability,https://github.com/google/rust-async-coap/issues/33,ArcGuard's Send and Sync should have bounds on RC
 RUSTSEC-2020-0128,cache,2020-11-24,high,8.1,,thread-safety,Vulnerability,https://github.com/krl/cache/issues/1,Cache: Send/Sync impls needs trait bounds on?K
 RUSTSEC-2020-0130,bunch,2020-11-12,high,8.1,,thread-safety,Vulnerability,https://github.com/krl/bunch/issues/1,Bunch unconditionally implements Send/Sync
-RUSTSEC-2020-0132,array-tools,2020-12-31,critical,9.8,>= 0.3.2,memory-corruption,Vulnerability,https://github.com/L117/array-tools/issues/2,FixedCapacityDequeLike::clone() can cause dropping uninitialized memory
-RUSTSEC-2020-0148,cgc,2020-12-10,medium,5.9,,memory-corruption,Vulnerability,https://github.com/playXE/cgc/issues/5,Multiple soundness issues in?Ptr
 RUSTSEC-2020-0149,appendix,2020-11-15,medium,5.9,,thread-safety,Vulnerability,https://github.com/krl/appendix/issues/6,Data race and memory safety issue in Index
-RUSTSEC-2020-0153,bite,2020-12-31,none,,,memory-exposure,info,https://github.com/hinaria/bite/issues/1,ead on uninitialized buffer may cause UB (bite::read::BiteReadExpandedExt::read_framed_max)
-RUSTSEC-2020-0154,buffoon,2020-12-31,none,,,memory-exposure,info,https://github.com/carllerche/buffoon/issues/2,InputStream::read_exact : Read on uninitialized buffer causes UB
-RUSTSEC-2020-0155,acc_reader,2020-12-27,none,,,memory-exposure,info,https://github.com/netvl/acc_reader/issues/1,Read?on uninitialized buffer in?fill_buf()?and?read_up_to()
-RUSTSEC-2020-0159,chrono,2020-11-10,none,,>=0.4.20,code-execution,Vulnerability,https://github.com/chronotope/chrono/issues/499,Potential segfault in?localtime_r?invocations
-RUSTSEC-2020-0161,array-macro,2020-05-07,none,,>= 1.0.5,memory-corruption,info,https://gitlab.com/KonradBorowski/array-macro/-/commit/01940637dd8f3bfeeee3faf9639fa9ae52f19f4d,array! macro is unsound in presence of traits that implement methods it calls internally
-RUSTSEC-2020-0164,cell-project,2020-08-27,none,,>=0.1.4,memory-corruption,info,https://github.com/RustyYato/cell-project/issues/3,cell-project?used incorrect variance when projecting through?&Cell<T>
-RUSTSEC-2021-0006,cache,2021-01-01,high,7.5,,memory-corruption,Vulnerability,https://github.com/krl/cache/issues/2,Exposes internally used raw pointer
-RUSTSEC-2021-0007,av-data,2021-01-07,high,7.5,>= 0.3.0,privilege-escalation,Vulnerability,https://github.com/rust-av/rust-av/issues/136,Frame::copy_from_raw_parts can lead to segfault without unsafe
-RUSTSEC-2021-0008,bra,2021-01-02,critical,9.1,>= 0.1.1,memory-exposure,Vulnerability,https://github.com/Enet4/bra-rs/issues/1,reading on uninitialized buffer can cause UB (impl<R> BufRead for GreedyAccessReader<R>)
-RUSTSEC-2021-0009,basic_dsp_matrix,2021-01-10,high,7.5,>= 0.9.2,memory-corruption,Vulnerability,https://github.com/liebharc/basic_dsp/issues/47,"panic safety issue in impl TransformContent<S, D> for [S; (2|3|4)]"
-RUSTSEC-2021-0012,cdr,2021-01-02,critical,9.8,>= 0.2.4,memory-exposure,Vulnerability,https://github.com/hrektts/cdr-rs/issues/10,Reading uninitialized memory can cause UB (Deserializer::read_vec)
-RUSTSEC-2021-0015,calamine,2021-01-06,critical,9.8,>= 0.17.0,memory-corruption,Vulnerability,https://github.com/tafia/calamine/issues/199,Sectors::get accesses unclaimed/uninitialized memory
-RUSTSEC-2021-0020,hyper,2021-02-05,high,8.1,>=0.14.3,format-injection,Vulnerability,https://github.com/hyperium/hyper/security/advisories/GHSA-6hfq-h8hq-87mf,
-RUSTSEC-2021-0027,bam,2021-01-07,critical,9.8,>=0.1.3,memory-corruption,Vulnerability,https://gitlab.com/tprodanov/bam/-/issues/4,Loading a bgzip block can write out of bounds if size overflows.
-RUSTSEC-2021-0032,byte_struct,2021-03-01,critical,9.8,>= 0.6.1,memory-corruption,Vulnerability,https://github.com/wwylele/byte-struct-rs/issues/1,Deserializing an array can drop uninitialized memory on panic
-RUSTSEC-2021-0040,arenavec,2021-01-12,high,7.5,,memory-corruption,Vulnerability,https://github.com/ibabushkin/arenavec/issues/1,panic safety: double drop or uninitialized drop of T upon panic
-RUSTSEC-2021-0045,adtensor,2021-01-11,critical,9.8,,memory-corruption,Vulnerability,https://github.com/charles-r-earp/adtensor/issues/4,FromIterator implementation for Vector/Matrix can drop uninitialized memory
-RUSTSEC-2021-0053,algorithmica,2021-03-07,none,,,memory-corruption,Vulnerability,https://github.com/AbrarNitk/algorithmica/issues/1,merge_sort::merge()' crashes with double-free for T: Drop
-RUSTSEC-2021-0074,ammonia,2021-07-08,none,,">= 3.1.0, >= 2.1.3, < 3.0.0",format-injection,Vulnerability,https://github.com/rust-ammonia/ammonia/pull/142,Incorrect handling of embedded SVG and MathML leads to mutation XSS
-RUSTSEC-2021-0075,ark-r1cs-std,2021-07-08,none,,>=0.3.1,crypto-failure,Vulnerability,https://github.com/arkworks-rs/r1cs-std/pull/70,Flaw in FieldVar::mul_by_inverse allows unsound R1CS constraint systems
-RUSTSEC-2021-0077,better-macro,2021-07-22,none,,,code-execution,Vulnerability,https://github.com/raycar5/better-macro/blob/24ff1702397b9c19bbfa4c660e2316cd77d3b900/src/lib.rs#L36-L38,better-macro has deliberate RCE to prove a point
-RUSTSEC-2021-0084,bronzedb-protocol,2021-01-03,none,,,memory-exposure,info,https://github.com/Hexilee/BronzeDB/issues/1,Read?on uninitialized buffer can cause UB (impl of?ReadKVExt)
-RUSTSEC-2021-0085,binjs_io,2021-01-03,none,,,memory-exposure,info,https://github.com/binast/binjs-ref/issues/460,Read' on uninitialized memory may cause UB
-RUSTSEC-2021-0090,ash,2021-01-07,none,,>= 0.33.1,memory-exposure,info,https://github.com/MaikKlein/ash/issues/354,Reading on uninitialized memory may cause UB ( util::read_spv() )
-RUSTSEC-2021-0105,git-delta ,2021-09-09,high,7.8,>=0.8.3,file-disclosure,Vulnerability,https://nvd.nist.gov/vuln/detail/CVE-2021-36376 ,Relative Path Traversal in git-delta
-RUSTSEC-2021-0106,bat,2021-07-15,high,7.8,>=0.18.2,code-execution,Vulnerability,https://nvd.nist.gov/vuln/detail/CVE-2021-36753,Uncontrolled Search Path Element in sharkdp/bat
-RUSTSEC-2021-0116,arrow,2021-09-14,none,,>= 6.4.0,memory-exposure,Vulnerability,https://github.com/apache/arrow-rs/issues/775,BinaryArray does not perform bound checks on reading values and offsets
-RUSTSEC-2021-0117,arrow,2021-09-14,none,,>= 6.4.0,memory-exposure,Vulnerability,https://github.com/apache/arrow-rs/issues/772?,DecimalArray does not perform bound checks on accessing values and offsets
-RUSTSEC-2021-0118,arrow,2021-09-14,none,,>= 6.4.0,memory-exposure,Vulnerability,https://github.com/apache/arrow-rs/issues/774,FixedSizeBinaryArray does not perform bound checks on accessing values and offsets
-RUSTSEC-2021-0131,brotli-sys,2021-12-20,none,,,memory-corruption,Vulnerability,https://github.com/bitemyapp/brotli2-rs/issues/45,Integer overflow in the bundled Brotli C library
-RUSTSEC-2022-0003,ammonia,2022-01-19,none,,>=3.1.3,format-injection,Vulnerability,https://github.com/rust-ammonia/ammonia/pull/147,Space bug in clean_text
-RUSTSEC-2022-0012,arrow2,2022-03-04,none,,">= 0.7.1, < 0.8, >= 0.8.2, < 0.9, >= 0.9.2, < 0.10, >= 0.10.0",memory-corruption,Vulnerability,https://github.com/jorgecarleitao/arrow2/issues/880,Arrow2 allows double free in safe code
-RUSTSEC-2022-0017,array-macro,2022-04-27,none,,>= 2.1.2,code-execution,info,https://gitlab.com/KonradBorowski/array-macro/-/issues/5,array! macro is unsound when its length is impure constant
-RUSTSEC-2022-0037,async-graphql,2022-07-21,high,7.5,>= 4.0.6,denial-of-service,Vulnerability,https://github.com/async-graphql/async-graphql/commit/521769b80039fc8043d1c9883e3d6e5b57359072,Denial of service on deeply nested fragment requests
-RUSTSEC-2022-0055,axum-core,2022-08-31,none,,">= 0.2.8, < 0.3.0-rc.1, >= 0.3.0-rc.2",denial-of-service,Vulnerability,https://github.com/tokio-rs/axum/pull/1346,No default limit put on request bodies
-RUSTSEC-2022-0068,capnp,2022-11-30,none,,">= 0.15.2, ^0.14.11, ^0.13.7",memory-exposure,Vulnerability,https://github.com/capnproto/capnproto/tree/master/security-advisories/2022-11-30-0-pointer-list-bounds.md,out-of-bounds read possible when setting list-of-pointers
-RUSTSEC-2022-0078,bumpalo,2022-01-14,none,,>=3.11.1,memory-exposure,info,https://github.com/fitzgen/bumpalo/blob/main/CHANGELOG.md#3111,Use-after-free due to a lifetime error in Vec::into_iter()
-RUSTSEC-2022-0089,aliyun-oss-client,2022-11-19,medium,5.6,>= 0.8.1,crypto-failure,Vulnerability,https://github.com/advisories/GHSA-3w3h-7xgx-grwc,aliyun-oss-client secret exposure
-RUSTSEC-2022-0090,libsqlite3-sys,2022-08-03,high,7.5,>= 0.25.1,denial-of-service,Vulnerability,https://nvd.nist.gov/vuln/detail/CVE-2022-35737,libsqlite3-sys?via C SQLite CVE-2022-35737
-RUSTSEC-2022-0091,tauri,2022-09-19,low,2.3,>=1.1.2,privilege-escalation,Vulnerability,https://github.com/tauri-apps/tauri/issues/5234 ,tauri filesystem scope partial bypass
-RUSTSEC-2023-0004,bzip2,2023-01-09,none,,>= 0.4.4,denial-of-service,Vulnerability,https://github.com/alexcrichton/bzip2-rs/pull/86,bzip2 Denial of Service (DoS)
-RUSTSEC-2023-0015,ascii,2023-02-25,none,,>= 0.9.3,memory-corruption,info,https://github.com/tomprogrammer/rust-ascii/issues/64,Ascii allows out-of-bounds array indexing in safe code
-RUSTSEC-2023-0027,async-nats,2023-03-24,none,,>= 0.29.0,crypto-failure,Vulnerability,https://github.com/nats-io/nats.rs/commit/817a7b942c462fa9d9938dcb62124173634132fb#diff-767d442397fcaaf2f83e8f924d4a70317a2ce4703a49964d6007707949cfa5f5L303-R304,TLS certificate common name validation bypass
-RUSTSEC-2023-0033,borsh,2023-04-12,none,,>=0.10.4,memory-corruption,info,https://github.com/near/borsh-rs/issues/19,Parsing borsh messages with ZST which are not-copy/clone is unsound
-RUSTSEC-2023-0039,buffered-reader,2023-05-16,none,,">= 1.0.2, < 1.1.0, >= 1.1.5, < 1.2.0, >= 1.2.0",denial-of-service,Vulnerability,https://lists.sequoia-pgp.org/hyperkitty/list/announce@lists.sequoia-pgp.org/thread/SN2E3QRT4DMQ5JNEK6VIN6DJ5SH766DI/,Out-of-bounds array access leads to panic
-RUSTSEC-2023-0062,bcder,2023-09-13,high,7.5,>= 0.7.3,denial-of-service,Vulnerability,https://nlnetlabs.nl/downloads/bcder/CVE-2023-39914.txt,BER/CER/DER decoder panics on invalid input
-RUSTSEC-2023-0066,pleaser ,2023-10-03,medium,4.6,,privilege-escalation,Vulnerability,https://gitlab.com/edneville/please/-/issues/13,Vulnerable to privilege escalation using ioctls TIOCSTI and TIOCLINUX
-RUSTSEC-2023-0068,cocoon,2023-10-15,medium,4.5,>=0.4.0,crypto-failure,Vulnerability,https://github.com/fadeevab/cocoon/issues/22,"Sequential calls of encryption API (encrypt,?wrap, and?dump) result in nonce reuse"
-RUSTSEC-2023-0069,sudo-rs,2023-11-01,low,3.1,>=0.2.1,file-disclosure,Vulnerability,https://github.com/advisories/GHSA-2r3c-m6v7-9354,sudo-rs: Path Traversal vulnerability
-RUSTSEC-2023-0073,candid,2023-12-08,high,7.5,>=0.9.10,denial-of-service,Vulnerability,https://github.com/dfinity/candid/pull/478,Infinite decoding loop through specially crafted payload
-RUSTSEC-2023-0079,pqc_kyber,2023-12-01,high,7.4,,crypto-failure,Vulnerability,https://github.com/Argyle-Software/kyber/issues/108,KyberSlash: division timings depending on secrets
-RUSTSEC-2023-0083,blurhash,2023-09-19,high,8.6,>=0.2.0,denial-of-service,Vulnerability,https://github.com/whisperfish/blurhash-rs/security/advisories/GHSA-cxvp-82cq-57h2,blurhash: panic on parsing crafted blurhash inputs
-RUSTSEC-2024-0017,cassandra-cpp,2024-02-28,none,,>= 3.0.0,memory-corruption,info,https://github.com/Metaswitch/cassandra-rs/security/advisories/GHSA-x9xc-63hg-vcfq,Non-idiomatic use of iterators leads to use after free
-RUSTSEC-2024-0343,nano-id,2024-06-03,critical,9.4,>=0.4.0,crypto-failure,Vulnerability,,Reduced entropy due to inadequate character set usage
-RUSTSEC-2024-0349,gix-worktree,2024-05-22,high,8.8,>= 0.34.0,code-execution,Vulnerability,https://github.com/Byron/gitoxide/security/advisories/GHSA-7w47-3wg8-547c,Traversal outside working tree enables arbitrary code execution
-RUSTSEC-2024-0362,alloy-json-abi,2024-07-30,none,,>= 0.7.7,memory-corruption,Vulnerability,https://github.com/alloy-rs/core/issues/702,Stack overflow when parsing specially crafted JSON ABI strings
-RUSTSEC-2024-0371,gix-path,2024-09-06,medium,6,0.10.11,privilege-escalation,Vulnerability,https://github.com/Byron/gitoxide/security/advisories/GHSA-m8rp-vv92-46c7,gix-path improperly resolves configuration path reported by Git
-RUSTSEC-2024-0373,quinn-proto,2024-09-02,high,7.5,>= 0.11.7,denial-of-service,Vulnerability,https://github.com/quinn-rs/quinn,Endpoint::retry()?calls can lead to panicking
-RUSTSEC-2024-0392,cggmp21-keygen,2024-07-18,none,,>= 0.3.0,crypto-failure,Vulnerability,https://github.com/dfns/cggmp21/pull/103,Ambiguous challenge derivation
-RUSTSEC-2024-0393,cggmp21,2024-07-18,none,,>= 0.4.0,crypto-failure,Vulnerability,https://github.com/dfns/cggmp21/pull/103,Ambiguous challenge derivation
-RUSTSEC-2024-0433,age,2024-12-18,none,,>=0.11.1,code-execution,Vulnerability,https://github.com/str4d/rage/security/advisories/GHSA-4fg7-vxc8-qx5w,"Malicious plugin names, recipients, or identities can cause arbitrary binary execution"
-RUSTSEC-2024-0434,matrix-sdk-crypto,2024-01-07,none,,>= 0.8.0,crypto-failure,info,https://github.com/matrix-org/matrix-rust-sdk/security/advisories/GHSA-r5vf-wf4h-82gg,Missing facility to signal rotation of a verified cryptographic identity
-RUSTSEC-2025-0019,array-init-cursor,2025-03-27,none,,>= 0.2.1,memory-corruption,info,https://github.com/planus-org/planus/issues/293,array-init-cursor in version 0.2.0 and below is unsound when used with types that implement Drop
+RUSTSEC-2020-0150,disrustor,2020-12-17,medium,5.9,>=0.3,thread-safety,Vulnerability,https://github.com/sklose/disrustor/issues/1 ,RingBuffer can create multiple mutable references and cause data races
+RUSTSEC-2021-0036,internment,2021-03-03,critical,9.8,>=0.4.2,thread-safety,Vulnerability,https://github.com/droundy/internment/issues/20 ,Intern: Data race allowed on T
+RUSTSEC-2020-0143,multiqueue ,2020-12-25,high,8.1,,thread-safety,Vulnerability,https://github.com/schets/multiqueue/issues/31 ,"Queues allow non-Send types to be sent to other threads, allowing data races"
+RUSTSEC-2020-0127,high,2020-12-18,high,8.1,>=0.1.43,thread-safety,Vulnerability,https://github.com/purpleposeidon/v9/issues/1 ,SyncRef's clone() and debug() allow data races
+RUSTSEC-2023-0058,inventory,2023-09-10,none,,>=0.2.0,thread-safety,Vulnerability,https://github.com/dtolnay/inventory/pull/42 ,Exposes reference to non-Sync data to an arbitrary thread
+RUSTSEC-2023-0022,openssl,2023-03-24,none,,>=0.10.48,thread-safety,Vulnerability,https://github.com/sfackler/rust-openssl/pull/1854 ,openssl X509NameBuilder::build returned object is not thread safe
+RUSTSEC-2022-0029,crossbeam,2022-06-07,none,,>=0.3.0,thread-safety,Vulnerability,https://github.com/crossbeam-rs/crossbeam/pull/98,MsQueue push/pop use the wrong orderings
+RUSTSEC-2021-0113,metrics-util ,2021-04-07,none,,>=0.7.0,thread-safety,Vulnerability,https://github.com/metrics-rs/metrics/issues/190,AtomicBucket unconditionally implements Send/Sync
+RUSTSEC-2021-0124,tokio,2021-11-16,none,,>=1.13.1,thread-safety,Vulnerability,https://github.com/tokio-rs/tokio/issues/4225,Data race when sending and receiving after closing a oneshot channel
